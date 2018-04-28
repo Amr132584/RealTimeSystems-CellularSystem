@@ -23,7 +23,7 @@ public class OnPressedHandler {
           System.out.println("In OnPressed Handler");
         if(MainClass.phone.getCurrentState().equals("Off")||MainClass.phone.getCurrentState().equals("No Signal"))
         {
-          
+            
             MainClass.phone.scanForSignal();
         }
         else

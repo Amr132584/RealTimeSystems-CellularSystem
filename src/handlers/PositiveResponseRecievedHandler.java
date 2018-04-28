@@ -5,7 +5,9 @@
  */
 package handlers;
 
+import GUI.MainClass;
 import cellular.phone.control.system.Phone;
+import events.PositiveResponseRecieved;
 
 /**
  *
@@ -16,6 +18,11 @@ public class PositiveResponseRecievedHandler {
 
     public PositiveResponseRecievedHandler(Phone phone) {
         this.phone = phone;
+    }
+    
+    public void update(PositiveResponseRecieved event)
+    {
+        MainClass.phone.enterCall();
     }
     
 }

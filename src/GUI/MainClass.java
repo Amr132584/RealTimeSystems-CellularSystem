@@ -26,7 +26,7 @@ public class MainClass {
       public static Cell cell;
       public static void main(String[] args) {
         //... Set the Look and Feel to that of system we're running on.
-      
+      cell=new Cell();
         phone = new Phone(new Cell(), new Receiver(), new Transmitter());
        engine = EPServiceProviderManager.getDefaultProvider();
        new Config(phone).init();
@@ -41,5 +41,9 @@ public class MainClass {
         JFrame window = phone.getScreen();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
+        CellOption window2 = new CellOption();
+        window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window2.setVisible(true);
+          //MainClass.phone.setCellScreen(window2);
     }
 }

@@ -75,20 +75,20 @@ private Phone phone;
         System.out.println("Creating EPLs...");
       createEPL_CallRequest();/*
         createEPL_CellFounded();
-        createEPL_CellFullCapacity();
+        createEPL_CellFullCapacity();*/
         createEPL_EndEntered();
-        createEPL_LongPress();
+        /*createEPL_LongPress();
         createEPL_NoCellFounded();
         createEPL_NumberEntered();*/
         createEPL_OffPressed();
         createEPL_OnPressed();
-      /*  createEPL_OutOFRange();
+      // createEPL_OutOFRange();
         createEPL_PositiveResponseRecieved();
-        createEPL_SendEntered();
+       /* createEPL_SendEntered();*/
         createEPL_SignalLost();
-        createEPL_TerminationRequestCell();
-        createEPL_TerminationRequestPhone();
-        createEPL_IncomingCall();*/
+       /* createEPL_TerminationRequestCell();
+        createEPL_TerminationRequestPhone();*/
+        createEPL_IncomingCall();
         System.out.println("Creating EPLs [DONE]");
     }
      
@@ -107,12 +107,12 @@ private Phone phone;
         EPStatement statement = engine.getEPAdministrator().createEPL(CellFullCapacity.getStatement());
         statement.setSubscriber(new CellFullCapacityHandler(phone));
     }
-
+*/
     private void createEPL_EndEntered() {
         EPStatement statement = engine.getEPAdministrator().createEPL(EndEntered.getStatement());
         statement.setSubscriber(new EndEnteredHandler(phone));
     }
-
+/*
     private void createEPL_LongPress() {
         EPStatement statement = engine.getEPAdministrator().createEPL(LongPress.getStatement());
         statement.setSubscriber(new LongPressHandler(phone));
@@ -141,22 +141,22 @@ private Phone phone;
     private void createEPL_OutOFRange() {
         EPStatement statement = engine.getEPAdministrator().createEPL(OutOFRange.getStatement());
         statement.setSubscriber(new OutOFRangeHandler(phone));
-    }
+    }*/
        private void createEPL_PositiveResponseRecieved() {
         EPStatement statement = engine.getEPAdministrator().createEPL(PositiveResponseRecieved.getStatement());
         statement.setSubscriber(new PositiveResponseRecievedHandler(phone));
     }
-
+/*
     private void createEPL_SendEntered() {
         EPStatement statement = engine.getEPAdministrator().createEPL(SendEntered.getStatement());
         statement.setSubscriber(new SendEnteredHandler(phone));
     }
-
+*/
     private void createEPL_SignalLost() {
         EPStatement statement = engine.getEPAdministrator().createEPL(SignalLost.getStatement());
         statement.setSubscriber(new SignalLostHandler(phone));
     }
-
+/*
     private void createEPL_TerminationRequestCell() {
         EPStatement statement = engine.getEPAdministrator().createEPL(TerminationRequestCell.getStatement());
         statement.setSubscriber(new TerminationRequestCellHandler(phone));
@@ -165,9 +165,9 @@ private Phone phone;
     private void createEPL_TerminationRequestPhone() {
         EPStatement statement = engine.getEPAdministrator().createEPL(TerminationRequestPhone.getStatement());
         statement.setSubscriber(new TerminationRequestPhoneHandler(phone));
-    }
+    }*/
      private void createEPL_IncomingCall() {
         EPStatement statement = engine.getEPAdministrator().createEPL(IncomingCall.getStatement());
         statement.setSubscriber(new IncomingCallHandler(phone));
-    }*/
+    }
 }

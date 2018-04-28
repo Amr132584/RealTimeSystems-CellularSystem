@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import events.EndEntered;
+
 /**
  *
  * @author omar1
@@ -69,6 +71,7 @@ public class Calling extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        MainClass.engine.getEPRuntime().sendEvent(new EndEntered());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -1,9 +1,11 @@
+package GUI;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+
 
 import events.EndEntered;
 import events.OnPressed;
@@ -13,15 +15,15 @@ import events.PositiveResponseRecieved;
  *
  * @author omar1
  */
-public class CellRecievedCall extends javax.swing.JFrame {
+public class InCallCell extends javax.swing.JFrame {
 
     /**
      * Creates new form CellRecievedCall
      */
-    public CellRecievedCall() {
+    public InCallCell() {
         initComponents();
-         jLabel1.setText("Phone with "+MainClass.phone.getNumber()+" Trying to call "+MainClass.phone.getEnteredNumber());
-       this.setTitle("Cell Request a call from phone");
+         jLabel1.setText("Phone with "+MainClass.phone.getNumber()+" in call with "+MainClass.phone.getEnteredNumber());
+       this.setTitle("Cell: In Call");
     }
 
     /**
@@ -36,7 +38,6 @@ public class CellRecievedCall extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         jButton2.setText("jButton2");
@@ -46,13 +47,6 @@ public class CellRecievedCall extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Phone Request A Call");
-
-        jButton1.setText("Accept");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jButton4.setText("Reject");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -70,8 +64,7 @@ public class CellRecievedCall extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(81, 81, 81)
+                        .addGap(145, 145, 145)
                         .addComponent(jButton4)))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
@@ -81,9 +74,7 @@ public class CellRecievedCall extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addComponent(jLabel1)
                 .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton4))
+                .addComponent(jButton4)
                 .addContainerGap(129, Short.MAX_VALUE))
         );
 
@@ -94,11 +85,6 @@ public class CellRecievedCall extends javax.swing.JFrame {
         // TODO add your handling code here:
          MainClass.engine.getEPRuntime().sendEvent(new EndEntered());
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        MainClass.engine.getEPRuntime().sendEvent(new PositiveResponseRecieved());
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,26 +103,28 @@ public class CellRecievedCall extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CellRecievedCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InCallCell.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CellRecievedCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InCallCell.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CellRecievedCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InCallCell.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CellRecievedCall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InCallCell.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CellRecievedCall().setVisible(true);
+                new InCallCell().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

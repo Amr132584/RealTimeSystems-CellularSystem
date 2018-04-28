@@ -6,6 +6,7 @@
 package cellular.phone.control.system;
 
 import java.util.ArrayList;
+import javax.swing.JFrame;
 
 /**
  *
@@ -15,10 +16,21 @@ public class Cell {
     private int maxNumOfPhone=3;
     private boolean available=false;
     private ArrayList<Phone> phonesOnCell=new ArrayList<>();
+    private JFrame window;
+    private String IncomingNumber;
 
     public Cell() {
         maxNumOfPhone=3;
         available=false;
+        
+    }
+
+    public JFrame getWindow() {
+        return window;
+    }
+
+    public void setWindow(JFrame window) {
+        this.window = window;
     }
     
     
@@ -59,6 +71,14 @@ public class Cell {
 
     public void setPhonesOnCell(ArrayList<Phone> phonesOnCell) {
         this.phonesOnCell = phonesOnCell;
+    }
+
+    public String getIncomingNumber() {
+        return IncomingNumber;
+    }
+
+    public void setIncomingNumber(String IncomingNumber) {
+        this.IncomingNumber = IncomingNumber;
     }
     
     

@@ -5,7 +5,9 @@
  */
 package handlers;
 
+import GUI.MainClass;
 import cellular.phone.control.system.Phone;
+import events.EndEntered;
 
 /**
  *
@@ -18,4 +20,8 @@ public class EndEnteredHandler {
         this.phone = phone;
     }
     
+    public void update(EndEntered event)
+    {
+        MainClass.phone.terminateCall();
+    }
 }

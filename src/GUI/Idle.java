@@ -65,6 +65,7 @@ public class Idle extends JFrame {
     //============================================================== method main
     //============================================================== constructor
     public Idle() {
+       
         //... Set attributes of the display field
         _displayField = new JTextField("0", 12);
         _displayField.setHorizontalAlignment(JTextField.RIGHT);

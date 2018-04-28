@@ -5,7 +5,9 @@
  */
 package handlers;
 
+import GUI.MainClass;
 import cellular.phone.control.system.Phone;
+import events.IncomingCall;
 
 /**
  *
@@ -16,6 +18,12 @@ public class IncomingCallHandler {
 
     public IncomingCallHandler(Phone phone) {
         this.phone = phone;
+    }
+    public void update(String recieverNumber, String senderNumber)
+    {
+        System.out.println("In Ringnig");
+        MainClass.phone.ringing(recieverNumber, senderNumber);
+        System.out.println("out Ringnig");
     }
     
 }

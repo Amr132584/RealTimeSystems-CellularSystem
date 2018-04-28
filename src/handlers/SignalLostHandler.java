@@ -5,7 +5,9 @@
  */
 package handlers;
 
+import GUI.MainClass;
 import cellular.phone.control.system.Phone;
+import events.SignalLost;
 
 /**
  *
@@ -17,5 +19,8 @@ public class SignalLostHandler {
     public SignalLostHandler(Phone phone) {
         this.phone = phone;
     }
-    
+    public void update(SignalLost event)
+    {
+        MainClass.phone.getTransmitter().lostSignal();
+    }
 }
