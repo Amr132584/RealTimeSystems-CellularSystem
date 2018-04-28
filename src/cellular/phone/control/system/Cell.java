@@ -17,8 +17,8 @@ public class Cell {
     private ArrayList<Phone> phonesOnCell=new ArrayList<>();
 
     public Cell() {
-        maxNumOfPhone=0;
-        available=true;
+        maxNumOfPhone=3;
+        available=false;
     }
     
     
